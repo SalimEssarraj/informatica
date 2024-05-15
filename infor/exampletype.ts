@@ -79,16 +79,34 @@ const auto2 = {
 
 dettagliAuto(auto2);
 
+//GENERICS
 
-//ESEMPIO UNION TYPES
+function tipo(arg: string): string {
+    console.log(typeof arg);
+    return arg;
+  }
+  
+  tipo('ciao'); 
+  tipo(199); 
+  tipo({a: 1}); 
 
-type NumeroOstringa = number | string;
+  function Tipo<T>(arg: T): T {
+    console.log(typeof arg);
+    return arg;
+  }
+  
+  Tipo<string>('ciao'); 
+  
+  Tipo<number>(199); 
+  
+  
+  Tipo<{a: number}>({a: 1})
 
-let valore: NumeroOstringa;
 
-valore = 1;
-console.log(valore)
+//INFERENZE VARIABILI
 
+let ciao = true;
+console.log(typeof ciao)
 
-valore = "Hello World"
-console.log(valore)
+let classe = 5;
+console.log(typeof classe)
