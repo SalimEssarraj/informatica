@@ -78,3 +78,17 @@ const auto2 = {
 
 
 dettagliAuto(auto2);
+
+
+//ESEMPIO UNION TYPES
+
+type NumeroOstringa = number | string;
+
+let valore: NumeroOstringa;
+
+valore = 1;
+console.log(valore)
+
+
+valore = "Hello World"
+console.log(valore)
